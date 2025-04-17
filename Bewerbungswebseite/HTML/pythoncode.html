@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Code</title> 
+
+    <link rel="icon" href="../Bilder/Bild1.png" type="image/png">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/responsive.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/themes/prism.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/line-numbers/prism-line-numbers.css" rel="stylesheet" />
+    
+    <style>
+        
+        .code-container code {
+            color: rgb(154, 14, 14);
+        }
+        
+    </style>
+</head>
+
+</head>
+<body>
+    <div class="navbar">
+        <h1 class="headline">Python Code</h1>
+
+        <div>
+            <input type="checkbox" id="toggle_button">
+            <label for="toggle_button">
+            <span class="material-symbols-outlined">menu</span></label>
+            <a href="/">Home</a>
+            <a href="about.html">Über mich</a>
+            <a href="werdegang.html">Werdegang</a>
+            <a href="anwendungen.html">Anwendungen</a>
+            <a href="contact.html">Kontakt</a>
+        </div>
+    </div>
+
+<div class="about-container">
+<h2><img class="header-image1" src="../Bilder/hashtag.png">&nbsp;&nbsp;Password Generator</h2>
+<p>Der Password Generator ist ein praktisches Beispiel für die Anwendung von Schleifen und Zufallszahlen in Python. Dieses Programm ermöglicht es Nutzern, ein sicheres Passwort zu erstellen, indem es zufällig Zeichen aus verschiedenen Kategorien kombiniert.</p>
+<div class="code-container">
+<pre class="line-numbers">
+<code class="language-python">import random
+letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
+    
+print("Welcome to the PyPassword Generator")
+nr_letters = int(input("How many letters would you like in your password?\n")) 
+nr_symbols = int(input("How many symbols would you like?\n"))
+nr_numbers = int(input("How many numbers would you like?\n"))
+    
+passwort_list = []
+    
+for i in range(nr_letters):
+    passwort_list.append(random.choice(letters))
+for i in range(nr_symbols):
+    passwort_list.append(random.choice(symbols))
+for i in range(nr_numbers):
+    passwort_list.append(random.choice(numbers))
+    
+random.shuffle(passwort_list)
+    
+password = ""
+for i in passwort_list:
+    password += i
+    
+print(f"Ihr Passwort lautet: {password}")</code>
+</pre>
+</div>
+</div>
+
+<div class="about-container">
+    <h2><img class="header-image1" src="../Bilder/hashtag.png">&nbsp;&nbsp;Tip Calculator</h2>
+<p>Der Tip Calculator ist ein einfaches Projekt, das den Umgang mit Benutzereingaben und grundlegenden mathematischen Operationen zeigt. Benutzer können den Rechnungsbetrag und den gewünschten Trinkgeldprozentsatz eingeben, woraufhin der Calculator das Trinkgeld und den Gesamtbetrag berechnet.</p>
+<div class="code-container">
+<pre class="line-numbers">
+<code class="language-python">print("Hello, welcome to our Program!")
+
+rechnung = input("Wie hoch ist die komplette Rechnung in €?\n")
+    
+trinkgeld = input("Wie viel % Trinkgeld soll gegeben werden?\n")
+    
+personen = input("Auf wie viele Personen soll die Rechnung aufgeteilt werden?\n")
+    
+rechnung = float(rechnung)
+personen = int(personen)
+trinkgeld = float(trinkgeld)
+    
+trinkgeldinbetrag = rechnung * trinkgeld / 100
+gesamtbetrag = rechnung + trinkgeldinbetrag
+numeric_result = gesamtbetrag / personen
+    
+print(f"Betrag pro Person: {numeric_result:.2f}")</code>
+</pre>
+</div>
+</div>
+
+<div class="about-container">
+<h2><img class="header-image1" src="../Bilder/hashtag.png">&nbsp;&nbsp;Primfaktorzerlegung</h2>
+<p>Die Primfaktorzerlegung ist ein wichtiges Konzept in der Mathematik, das die Zerlegung einer Zahl in ihre Primfaktoren darstellt. In diesem Projekt wird eine Funktion erstellt, die alle Primfaktoren einer gegebenen Zahl berechnet. Dies erfolgt durch wiederholte Division der Zahl, um die kleinsten Primfaktoren zu finden.</p>
+<div class="code-container">
+<pre class="line-numbers">
+<code class="language-python">def prime_factors(n):
+    factors = []
+
+    while n % 2 == 0:
+        factors.append(2)
+        n //= 2
+
+    for i in range(3, int(n ** 0.5) + 1, 2):
+        while n % i == 0:
+            factors.append(i)
+            n //= i
+
+    if n > 2:
+        factors.append(n)
+
+    return factors
+def main():
+
+    try:
+        number = int(input("Geben Sie eine Zahl ein: "))
+
+        if number <= 0:
+            print("Bitte geben Sie eine positive Zahl größer als 0 ein.")
+        else:
+            factors = prime_factors(number)
+            print(f"Die Primfaktorenzerlegung von {number} ist: {' * '.join(map(str, factors))}")
+    except ValueError:
+        print("Bitte geben Sie eine gültige Zahl ein.")
+
+if __name__ == "__main__":
+    antwort = "j"  
+    while antwort == "j":
+        main()
+        antwort = input("Noch einmal? (j)")</code>
+</pre>
+</div>
+</div>
+
+    <div class="impressum-container">
+        <img class="header-image3" src="../Bilder/code.png">
+
+        <div>
+            <button class="styled-button" onclick="window.history.back();">Zurück</button>
+        </div>
+    </div>
+
+    <footer>
+        <p class="footer">© <span id="year"></span> Maximilian Heeß. Alle Rechte vorbehalten.&nbsp;&nbsp;&nbsp;<button class="impressum" onclick="window.location.href='impressum.html';">Impressum</button>&nbsp;&nbsp;&nbsp;<button class="impressum" onclick="window.location.href='datenschutz.html';">Datenschutzerklärung</button></p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/line-numbers/prism-line-numbers.js"></script>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>

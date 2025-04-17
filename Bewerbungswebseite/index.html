@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <link rel="icon" href="../Bilder/Bild1.png" type="image/png">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/responsive.css"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
+
+</head>
+<body>
+    <div class="navbar">
+        <h1 class="headline">Maximilian Heeß</h1>
+        
+        <div>
+            <input type="checkbox" id="toggle_button">
+            <label for="toggle_button">
+            <span class="material-symbols-outlined">menu</span></label>
+            <a href="/">Home</a>
+            <a href="HTML/about.html">Über mich</a>
+            <a href="HTML/werdegang.html">Werdegang</a>
+            <a href="HTML/anwendungen.html">Anwendungen</a>
+            <a href="HTML/contact.html">Kontakt</a>
+        </div>
+    </div>
+
+    <div class="image-container">
+        <img src="../Bilder/BewBild.JPG" alt="Bewerbungsbild">
+        
+        <div class="image-container-right">
+        <p><img class="header-image2" src="../Bilder/code.png">
+        Geburtsdatum:&nbsp;&nbsp;08.10.1996</p>
+        <p><img class="header-image2" src="../Bilder/code.png">
+        Geburtsort:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Filderstadt</p>
+        <p><img class="header-image2" src="../Bilder/code.png">
+        Familienstand:&nbsp;&nbsp;&nbsp;ledig</p>
+        <p><img class="header-image2" src="../Bilder/code.png">
+        Nationalität:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deutsch</p>
+
+        </div>
+    </div>
+
+    <div class="image-container2">
+    <div class="text-container">
+        <h3>Herzlich Willkommen auf meiner Bewerbungswebseite!</h3>
+        <p>Diese Webseite bietet Ihnen einen umfassenden Einblick in meinen beruflichen Werdegang, meine Qualifikationen und meine Leidenschaft für die Anwendungsentwicklung. Sie soll als digitale Visitenkarte dienen, auf der Sie alle relevanten Informationen über mich, meine bisherigen Erfahrungen und meine Ziele finden. Mein Fokus liegt darauf, meine Kenntnisse im Bereich Anwendungsentwicklung sowie in der IT-Branche im Allgemeinen weiter auszubauen und neue Herausforderungen als Anwendungsentwickler zu meistern. Ich lade Sie ein, sich ein Bild von meinen Fähigkeiten und meiner Motivation zu machen.</p>
+    </div>
+    </div>
+
+    <div class="image-container2">
+        
+            <h3>Kenntnisse</h3>
+    
+            <div class="bilder">
+                <div class="skill">
+                    <img class="header-image4" src="../Bilder/java.png">
+                    <img class="header-image4" src="../Bilder/python.png">
+                    <img class="header-image4" src="../Bilder/wordpress.png">
+                </div>
+                <div class="skill">
+                    <img class="header-image5" src="../Bilder/html.png">
+                </div>
+                <div class="skill">
+                    <img class="header-image6" src="../Bilder/ms-office.png">
+                    <img class="header-image6" src="../Bilder/spss.png">
+                    <img class="header-image6" src="../Bilder/php.png">
+                </div>
+            </div>
+        
+    </div>
+    
+    <div class="maps-container">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5900.949939919917!2d9.402524669294303!3d48.79001416305083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4799b870e212c8f9%3A0x4d159ef29836b95e!2sL%C3%BCtzestra%C3%9Fe%2059%2C%2071384%20Weinstadt!5e0!3m2!1sde!2sde!4v1727798105618!5m2!1sde!2sde"
+            class="maps-frame"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    
+        <div class="maps-right">
+            <p><img class="header-image" src="../Bilder/phone.png"> <button class="tel-button" onclick="window.location.href='tel:+491774851052';">0177/4851052</button></p>
+            <p><img class="header-image" src="../Bilder/letter.png"> max-heess@gmx.de</p>
+        </div>
+    </div>
+
+    <div class="impressum-container">
+        <img class="header-image3" src="../Bilder/code.png" alt="Code Image">
+        
+        <button class="impressum" onclick="window.location.href='HTML/impressum.html';">Impressum</button>
+        </div>
+    </div>
+    
+    <footer>
+        <p class="footer">© <span id="year"></span> Maximilian Heeß. Alle Rechte vorbehalten. <button class="impressum" onclick="window.location.href='HTML/datenschutz.html';">Datenschutzerklärung</button></p>
+    </footer>
+    
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>

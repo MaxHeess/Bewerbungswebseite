@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressum</title>
+
+    <link rel="icon" href="../Bilder/Bild1.png" type="image/png">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/responsive.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
+ 
+</head>
+<body>
+    <div class="navbar">
+        <h1 class="headline">Impressum</h1>
+
+        <div>
+            <input type="checkbox" id="toggle_button">
+            <label for="toggle_button">
+            <span class="material-symbols-outlined">menu</span></label>
+            <a href="/">Home</a>
+            <a href="about.html">Über mich</a>
+            <a href="werdegang.html">Werdegang</a>
+            <a href="anwendungen.html">Anwendungen</a>
+            <a href="contact.html">Kontakt</a>
+        </div>
+    </div>
+
+    <div class="about-container">
+        <img class="header-image3" src="../Bilder/hashtag.png">
+        <p>Angaben gemäß § 5 DDG:<br>
+        Maximilian Heeß<br>
+        Lützestraße 59<br>
+        71384 Weinstadt</p>
+            
+        <p>Kontakt:<br>
+        E-Mail: max-heess@gmx.de</p>
+            
+            
+        <p>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:<br>
+        Maximilian Heeß</p>
+            
+            
+        <p>Disclaimer:<br>
+        Die Inhalte dieser Webseite wurden mit größtmöglicher Sorgfalt erstellt. Dennoch kann ich keine Gewähr für die Richtigkeit, Vollständigkeit und Aktualität der bereitgestellten Informationen übernehmen. Eine Haftung für Schäden, die direkt oder indirekt aus der Nutzung dieser Website resultieren, wird im gesetzlich zulässigen Rahmen ausgeschlossen.</p>
+        <p>Auf dieser Webseite finden Sie Links zu externen Seiten, deren Inhalte außerhalb meines Einflussbereichs liegen. Die Verantwortung für die Inhalte dieser verlinkten Seiten trägt allein der jeweilige Betreiber. Eine fortlaufende Überprüfung der verlinkten Inhalte erfolgt nicht, es sei denn, es gibt konkrete Hinweise auf rechtliche Verstöße. In einem solchen Fall werden die betreffenden Links unverzüglich entfernt.</p>
+        <p>Die Nutzung dieser Webseite erfolgt auf eigenes Risiko des Nutzers. Es wird darauf hingewiesen, dass die Datenübertragung im Internet (zum Beispiel bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht gewährleistet.</p>
+        <p>Die Verwendung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten durch Dritte zur Zusendung von nicht ausdrücklich angeforderter Werbung und Informationsmaterialien wird hiermit ausdrücklich untersagt. Ich behalte mir das Recht vor, rechtliche Schritte gegen die unverlangte Zusendung von Werbeinformationen, wie etwa Spam-Mails, einzuleiten.</p>
+        <p>Quellenangabe für Bilder:<br> 
+        Einige Bilder stammen von mir und zudem wurden Bilder von Pixabay und CleanPNG verwendet. Eine Verwendung der selbst erstellten Bilder durch Dritte ist ohne meine ausdrückliche Zustimmung nicht gestattet.</p>
+    </div>
+
+    <div class="impressum-container">
+        <img class="header-image3" src="../Bilder/code.png">
+
+        <div>
+            <button class="styled-button" onclick="window.history.back();">Zurück</button>
+        </div>
+    </div>
+
+    <footer>
+        <p class="footer">© <span id="year"></span> Maximilian Heeß. Alle Rechte vorbehalten.&nbsp;&nbsp;&nbsp;<button class="impressum" onclick="window.location.href='impressum.html';">Impressum</button>&nbsp;&nbsp;&nbsp;<button class="impressum" onclick="window.location.href='datenschutz.html';">Datenschutzerklärung</button></p>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>

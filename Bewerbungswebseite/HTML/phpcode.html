@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP Code</title> 
+
+    <link rel="icon" href="../Bilder/Bild1.png" type="image/png">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/responsive.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/themes/prism.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/line-numbers/prism-line-numbers.css" rel="stylesheet" />
+   
+</head>
+<body>
+    <div class="navbar">
+        <h1 class="headline">PHP Code</h1>
+
+        <div>
+            <input type="checkbox" id="toggle_button">
+            <label for="toggle_button">
+            <span class="material-symbols-outlined">menu</span></label>
+            <a href="/">Home</a>
+            <a href="about.html">Über mich</a>
+            <a href="werdegang.html">Werdegang</a>
+            <a href="anwendungen.html">Anwendungen</a>
+            <a href="contact.html">Kontakt</a>
+        </div>
+    </div>
+
+<div class="about-container">
+<h2><img class="header-image1" src="../Bilder/hashtag.png">&nbsp;&nbsp;Beispielübungen</h2>
+<div class="code-container">
+<pre class="line-numbers">
+<code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="de"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;title&gt;Beispielübungen&lt;/title&gt;
+
+&lt;style&gt;
+    table {
+        background-color: #d3d3d3;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        border: 2px solid #000; 
+        width: 80%; 
+        margin: 50px auto;
+    }
+    th, td {
+        font-weight: normal;
+        border: 2px solid #000;
+        text-align: center;
+        padding: 15px 40px; 
+        font-size: 18px; 
+    }
+    th {
+        background-color: #f2f2f2; 
+        font-weight: bold; 
+        font-size: 24px; 
+    }
+&lt;/style&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;h1&gt;Übung 1: Variablen und echo&lt;/h1&gt;
+    &lt;?php
+    $name = "Max";
+    echo $name . "&lt;br&gt;&lt;br&gt;";
+
+    $x = 8;
+    $y = 6;
+    $z = $x + $y;
+    echo $z . "&lt;br&gt;&lt;br&gt;";
+    ?&gt;
+
+    &lt;h1&gt;Übung 2: Bedingungen (if, else)&lt;/h1&gt;
+    &lt;?php
+    $age = 20;
+    if ($age &gt;= 18) {
+        echo "Die Person ist volljährig!";
+    } else {
+        echo "Die Person ist minderjährig!";
+    }
+    echo "&lt;br&gt;&lt;br&gt;";
+
+    $isStudent = true;
+    if ($isStudent) {
+        echo "Der Nutzer ist Student";
+    } else {
+        echo "Der Nutzer ist kein Student";
+    }
+    echo "&lt;br&gt;&lt;br&gt;";
+    ?&gt;
+
+    &lt;h1&gt;Übung 3: Schleifen (for, while)&lt;/h1&gt;
+    &lt;?php
+    for ($x = 1 ; $x &lt;= 10 ; $x++){
+        echo "" . $x;
+        echo "&lt;br&gt;";
+    }
+    echo "&lt;br&gt;&lt;br&gt;";
+
+    $counter = 5;
+    while ($counter &gt; 0) {
+        echo "Counter: " . $counter;
+        $counter--;
+        echo "&lt;br&gt;";
+    }
+    echo "Counter hat den Wert $counter erreicht.";
+    echo "&lt;br&gt;&lt;br&gt;";
+    ?&gt;
+
+    &lt;h1&gt;Übung 4: Arrays&lt;/h1&gt;
+    &lt;?php
+    $fruits = array("Apfel", "Banane", "Orange", "Traube");
+    foreach ($fruits as $x) {
+        echo "$x &lt;br&gt;";
+    }
+    echo "&lt;br&gt;&lt;br&gt;";
+    ?&gt;
+
+    &lt;h1&gt;Übung 5: Listen und Tabellen&lt;/h1&gt;
+    &lt;h3&gt;Lieblingsbücher:&lt;/h3&gt;
+    &lt;ul&gt;
+        &lt;?php
+        $books = array("&lt;li&gt;Harry Potter&lt;/li&gt;", "&lt;li&gt;Herr der Ringe&lt;/li&gt;", "&lt;li&gt;Game of Thrones&lt;/li&gt;", "&lt;li&gt;Narnia&lt;/li&gt;");
+        foreach ($books as $x) {
+            echo $x;
+        }
+        echo "&lt;br&gt;&lt;br&gt;";
+        ?&gt;
+    &lt;/ul&gt;
+
+    &lt;h3&gt;Multiplikationstabelle von 1 bis 5:&lt;/h3&gt;    
+    &lt;table&gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th&gt;*&lt;/th&gt;
+                
+                &lt;?php
+                for ($i = 1; $i &lt;= 5; $i++) {
+                    echo "&lt;th&gt;$i&lt;/th&gt;";
+                }
+                ?&gt;
+
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+
+            &lt;?php
+            for ($i = 1; $i &lt;= 5; $i++) {
+                echo "&lt;tr&gt;";
+                echo "&lt;th&gt;$i&lt;/th&gt;";
+                for ($j = 1; $j &lt;= 5; $j++) {
+                    $result = $i * $j;
+                    echo "&lt;td&gt;$result&lt;/td&gt;";
+                }
+                echo "&lt;/tr&gt;";
+            }
+            ?&gt;
+
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+</div>
+
+<div class="about-container">
+<h2><img class="header-image1" src="../Bilder/hashtag.png">&nbsp;&nbsp;Beispielübungen_2</h2>
+<div class="code-container">
+<pre class="line-numbers">
+<code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="de"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Beispielübungen_2&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+    &lt;h1&gt;Übung 1: Einfacher Umgang mit Variablen und Operationen&lt;/h1&gt;
+    &lt;?php
+    $preis1 = 19.99;
+    $preis2 = 7.50;
+    $anzahl = 5;
+    $summe = $preis1 + $preis2;
+    $summe_anzahl = $preis1 * $anzahl;
+    echo $summe . "&lt;br&gt;&lt;br&gt;";
+    echo $summe_anzahl . "&lt;br&gt;&lt;br&gt;";
+    ?&gt;
+
+    &lt;h1&gt;Übung 2: if-Bedingungen und Vergleiche&lt;/h1&gt;
+    &lt;?php
+    $temperature = 21;
+    if ($temperature &lt;= 10) {
+        echo "Kalt";
+    } elseif ($temperature &lt;= 20) {
+        echo "Mild";
+    } else {
+        echo "Heiß";
+    }
+    echo "&lt;br&gt;&lt;br&gt;";
+
+    $zahl = 13;
+    if ($zahl % 2 == 0) {
+        echo "Die Zahl " . $zahl . " ist gerade.";
+    } else {
+        echo "Die Zahl " . $zahl . " ist ungerade.";
+    }
+    ?&gt;
+
+    &lt;h1&gt;Übung 3: Schleifen (for, foreach, while)&lt;/h1&gt;
+    &lt;?php
+    for ($x = 1; $x &lt;= 100; $x++) {
+        echo "" . $x;
+        echo "&lt;br&gt;";
+    }
+    echo "&lt;br&gt;&lt;br&gt;";
+    
+    $name = ["Karl", "Egon", "Hans", "Horst", "Uwe"];
+    foreach ($name as $x) {
+        echo "$x &lt;br&gt;";
+    }
+    echo "&lt;br&gt;&lt;br&gt;";
+    
+    $counter = 10;
+    while ($counter &gt; 0) {
+        echo $counter;
+        $counter--;
+        echo "&lt;br&gt;";
+    }
+    ?&gt;
+
+    &lt;h1&gt;Übung 4: Arrays&lt;/h1&gt;
+    &lt;?php
+    $personen = ["Anna" =&gt; 25, "Peter" =&gt; 48, "Günther" =&gt; 66, "Uwe" =&gt; 16];
+    foreach ($personen as $x =&gt; $y) {
+        echo $x . " ist " . $y . " Jahre alt. &lt;br&gt;";
+    }
+    $summeAlter = array_sum($personen);
+    echo "Die Summe aller Alter beträgt: $summeAlter";
+    ?&gt;
+    
+    &lt;h1&gt;Übung 5: Benutzerdefinierte Funktionen&lt;/h1&gt;
+    &lt;?php
+    function berechneFakultaet($n) {
+        $fakultaet = 1;
+        echo "$n! = ";
+            
+        for ($i = $n; $i &gt; 0; $i--) {
+            $fakultaet *= $i;
+            echo $i; 
+            if ($i &gt; 1) echo " * "; 
+        }
+        echo " = $fakultaet";
+    }
+    $zahl = 5;
+    echo berechneFakultaet($zahl);
+    echo "&lt;br&gt;&lt;br&gt;";
+
+    function greetUser($name) {
+        echo "Hallo, $name! Schön, dich zu sehen.";
+    }
+    greetUser("Anna");
+    ?&gt;
+
+    &lt;h1&gt;Schwere Übungen&lt;/h1&gt;
+    &lt;h1&gt;Übung 1: Multiplikationstabelle mit zweidimensionalem Array&lt;/h1&gt;
+    
+    &lt;?php
+    $multiplikationsTabelle = [];
+    for ($i = 1; $i &lt;= 10; $i++) {
+        for ($j = 1; $j &lt;= 10; $j++) {
+            $multiplikationsTabelle[$i][$j] = $i * $j;
+        }
+    }
+    echo "&lt;table border='1' cellspacing='0' cellpadding='5'&gt;";
+    echo "&lt;thead&gt;";
+    echo "&lt;tr&gt;&lt;th&gt;*&lt;/th&gt;";
+        
+    for ($i = 1; $i &lt;= 10; $i++) {
+        echo "&lt;th&gt;$i&lt;/th&gt;"; 
+    }
+    echo "&lt;/tr&gt;&lt;/thead&gt;";
+    echo "&lt;tbody&gt;";
+
+    for ($i = 1; $i &lt;= 10; $i++) {
+        echo "&lt;tr&gt;";
+        echo "&lt;th&gt;$i&lt;/th&gt;"; 
+        for ($j = 1; $j &lt;= 10; $j++) {
+            echo "&lt;td align='center'&gt;{$multiplikationsTabelle[$i][$j]}&lt;/td&gt;";
+        }
+        echo "&lt;/tr&gt;";
+    }
+    echo "&lt;/tbody&gt;";
+    echo "&lt;/table&gt;";
+    ?&gt;
+
+    &lt;h1&gt;Übung 2: Dynamische Liste von Aufgaben (To-Do-Liste)&lt;/h1&gt;
+    &lt;?php
+    
+    if (!isset($_SESSION["aufgaben"])) {
+        $_SESSION["aufgaben"] = ["Einkaufen", "Haus putzen", "Programmieren üben"];
+    }
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        if (!empty(trim($_POST["neueAufgaben"]))) {
+            $neueAufgaben = explode(",", trim($_POST['neueAufgaben'])); 
+            foreach ($neueAufgaben as $aufgabe) {
+                $aufgabe = trim($aufgabe); 
+                if (!empty($aufgabe)) {
+                    $_SESSION['aufgaben'][] = $aufgabe;
+                }
+            }
+        }
+    }
+    ?&gt;
+
+    &lt;ul&gt;
+        &lt;?php
+        foreach ($_SESSION['aufgaben'] as $aufgabe) {
+            echo "&lt;li&gt;$aufgabe&lt;/li&gt;"; 
+            }
+        ?&gt;
+    &lt;/ul&gt;
+
+    &lt;form method="post"&gt;
+        &lt;label&gt;Neue Aufgaben hinzufügen (durch Kommas getrennt):&lt;/label&gt;&lt;br&gt;
+        &lt;input type="text" name="neueAufgaben" required&gt;
+        &lt;input type="submit" value="Hinzufügen"&gt;
+    &lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code>
+</pre>
+</div>
+</div>
+
+<div class="about-container">
+<h2><img class="header-image1" src="../Bilder/hashtag.png">&nbsp;&nbsp;Beispielübungen_3</h2>
+<div class="code-container">
+<pre class="line-numbers">
+<code class="language-html">&lt;?php
+session_start();
+?&gt;
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="de"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Beispielübungen_3&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;h2&gt;Übung 4: HTML-Formular und PHP-Verarbeitung&lt;/h2&gt;
+    &lt;form method="post"&gt;
+        &lt;label for="name"&gt;Name:&lt;/label&gt;
+        &lt;input type="text" id="name" name="name"&gt;
+        &lt;input type="submit" value="Absenden"&gt;
+    &lt;/form&gt;&lt;br&gt;
+
+    &lt;?php
+    if (isset($_POST["name"])) {
+        $name = $_POST["name"];
+        echo $name;
+    }
+    ?&gt;
+
+    &lt;h2&gt;Übung 5: Schleifen (for und while)&lt;/h2&gt;
+    &lt;?php
+    for ($i = 1; $i &lt;= 10; $i++) {
+        echo $i;
+        echo "&lt;br&gt;";
+    }
+    echo "&lt;br&gt;&lt;br&gt;";
+
+    $counter = 5;
+    while ($counter &gt;= 0) {
+        echo $counter--;
+        echo "&lt;br&gt;";
+    }
+    ?&gt;
+
+    &lt;h2&gt;Übung 6: Arrays&lt;/h2&gt;
+    
+    &lt;?php
+    $tage = ["Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag", "Sonntag"];
+    foreach ($tage as $x) {
+        echo $x;
+        echo "&lt;br&gt;";
+    }
+    ?&gt;
+
+    &lt;h2&gt;Übung 7: HTML-Liste aus Array generieren&lt;/h2&gt;
+    &lt;?php
+    $hobbys = ["Fußball", "Motorrad", "Musik", "Reisen"];
+    
+    echo "&lt;ul&gt;";
+    foreach ($hobbys as $hobby) {
+        echo "&lt;li&gt;$hobby&lt;/li&gt;";
+    }
+    echo "&lt;/ul&gt;";
+    ?&gt;
+
+    &lt;h2&gt;Übung 8: Einfache HTML-Tabelle&lt;/h2&gt;
+    &lt;?php
+    $produkte = ["Apfel" =&gt; 0.5, "Banane" =&gt; 0.3, "Orange" =&gt; 0.8];
+
+    echo "&lt;table border='1' cellspacing='0' cellpadding='5'&gt;";
+    echo "&lt;tr&gt;&lt;th&gt;Produkt&lt;/th&gt;&lt;th&gt;Preis&lt;/th&gt;&lt;/tr&gt;";
+    foreach ($produkte as $produkt =&gt; $preis) {
+        echo "&lt;tr&gt;&lt;td&gt;$produkt&lt;/td&gt;&lt;td&gt;$preis €&lt;/td&gt;&lt;/tr&gt;";
+    }
+    echo "&lt;/table&gt;";
+    ?&gt;
+
+    &lt;h2&gt;Übung 9: Einfache mathematische Operationen&lt;/h2&gt;
+    &lt;?php
+    $a = 8;
+    $b = 4;
+    $summe = $a + $b;
+    $differenz = $a - $b;
+    $quotient = $a / $b;
+    echo "Summe = " . $summe . "&lt;br&gt;";
+    echo "Differenz = " . $differenz . "&lt;br&gt;";
+    echo "Quotient = " . $quotient;
+    ?&gt;
+
+    &lt;h2&gt;Übung 10: Einfache Nutzerbegrüßung&lt;/h2&gt;
+    &lt;?php
+    $uhrzeit = date('H');
+    if ($uhrzeit &gt;= 5 &amp;&amp; $uhrzeit &lt; 12) {
+        echo "Guten Morgen!";
+    } elseif ($uhrzeit &gt;= 12 &amp;&amp; $uhrzeit &lt; 18) {
+        echo "Guten Tag!";
+    } else {
+    echo "Guten Abend!";
+    }
+    ?&gt;
+
+    &lt;h2&gt;Übung 11: Kombination von HTML und PHP für Benutzerinteraktion&lt;/h2&gt;
+    
+    &lt;form method="post"&gt;
+        &lt;label for="zahl1"&gt;Zahl 1:&lt;/label&gt;
+        &lt;input type="number" id="zahl1" name="zahl1"&gt;
+        &lt;br&gt;
+        &lt;label for="zahl2"&gt;Zahl 2:&lt;/label&gt;
+        &lt;input type="number" id="zahl2" name="zahl2"&gt;
+        &lt;br&gt;&lt;br&gt;
+        &lt;input type="submit" value="Berechnen"&gt;
+    &lt;/form&gt;
+    
+    &lt;?php
+    if (isset($_POST["zahl1"])) {
+        $zahl1 = $_POST["zahl1"];
+    }
+    if (isset($_POST["zahl2"])) {
+        $zahl2 = $_POST["zahl2"];
+    }
+    echo "&lt;br&gt;";
+    $summe = $zahl1 + $zahl2;
+    echo "Die Summe ist: " . $summe;
+    ?&gt;
+
+    &lt;h2&gt;Schwerere Übungen (inklusive 2D-Arrays und Tabellen)&lt;/h2&gt;
+    &lt;h2&gt;Übung 2: Dynamische Liste von Aufgaben (To-Do-Liste)&lt;/h2&gt;
+
+    &lt;?php
+    if (!isset($_SESSION["todos"])){
+        $_SESSION["todos"] = [];
+    } 
+    if (isset($_POST["todo"])){
+        $_SESSION["todos"][] = $_POST["todo"];
+    }
+    ?&gt;
+
+    &lt;form method="POST"&gt;
+    Todos: &lt;br&gt;     
+    
+        
+    &lt;?php
+    echo "&lt;ul&gt;";
+    foreach ($_SESSION["todos"] as $todo) {
+        echo "&lt;li&gt;$todo&lt;/li&gt;";
+    }
+    echo "&lt;/ul&gt;";
+    echo "&lt;input type='text' name='todo' &gt;";
+    ?&gt;
+        
+    &lt;input type="submit" value="Senden"&gt;
+    &lt;/form&gt;
+
+    &lt;h2&gt;Übung 3: Mehrdimensionale Arrays und Tabellenausgabe&lt;/h2&gt;
+    &lt;?php
+    $schueler = [
+    ["name" =&gt; "Anna", "klasse" =&gt; "5A", "note" =&gt; 1],
+    ["name" =&gt; "Bernd", "klasse" =&gt; "5B", "note" =&gt; 2],
+    ["name" =&gt; "Clara", "klasse" =&gt; "5A", "note" =&gt; 3],
+    ];
+
+    echo "&lt;table border='1' cellspacing='0' cellpadding='8' style='text-align: center;'&gt;";
+    echo "&lt;tr&gt;";
+    echo "&lt;th&gt;Name&lt;/th&gt;";
+    echo "&lt;th&gt;Klasse&lt;/th&gt;";
+    echo "&lt;th&gt;Note&lt;/th&gt;";
+    echo "&lt;/tr&gt;";
+
+    foreach ($schueler as $student) {
+        echo "&lt;tr&gt;";
+        echo "&lt;td&gt;" . $student['name'] . "&lt;/td&gt;";
+        echo "&lt;td&gt;" . $student['klasse'] . "&lt;/td&gt;";
+        echo "&lt;td&gt;" . $student['note'] . "&lt;/td&gt;";
+        echo "&lt;/tr&gt;";
+    }
+    echo "&lt;/table&gt;";
+    echo "&lt;br&gt;";
+
+    function Durchschnittsnote($schueler) {
+        $summe = 0;
+        $anzahl = count($schueler);
+        
+        foreach ($schueler as $student) {
+            $summe += $student["note"];
+        }
+        if ($anzahl &gt; 0) {
+            return $summe / $anzahl;
+        } else {
+            return 0;
+        }
+    }
+    $durchschnittsnote = Durchschnittsnote($schueler);
+    echo "Durchschnittsnote: " . $durchschnittsnote;
+    ?&gt;
+
+    &lt;h2&gt;Übung 4: Prime-Zahlen finden&lt;/h2&gt;
+    &lt;?php
+    function isPrime($n) {
+        if ($n &lt;= 1) {
+            return false; 
+        }
+        for ($i = 2; $i &lt; $n; $i++) {
+            if ($n % $i == 0) {
+                return false; 
+            }
+        }
+        return true;
+    }
+    for ($n = 1; $n &lt;= 100; $n++) {
+        if (isPrime($n)) {
+            echo $n . "&lt;br&gt;";
+        }
+    }
+    ?&gt;
+
+    &lt;h2&gt;Übung 5: Erweitertes Array-Manipulations-Training&lt;/h2&gt;
+    &lt;?php
+    $produkte = [
+        ["name" =&gt; "Apfel", "preis" =&gt; 0.5, "menge" =&gt; 10],
+        ["name" =&gt; "Banane", "preis" =&gt; 0.3, "menge" =&gt; 20],
+        ["name" =&gt; "Orange", "preis" =&gt; 0.8, "menge" =&gt; 15],
+    ];
+
+    echo "&lt;table border='1' cellspacing='0' cellpadding='8' style='text-align: center;'&gt;";
+    echo "&lt;tr&gt;";
+    echo "&lt;th&gt;Name&lt;/th&gt;";
+    echo "&lt;th&gt;Preis&lt;/th&gt;";
+    echo "&lt;th&gt;Menge&lt;/th&gt;";
+    echo "&lt;th&gt;Gesamtpreis&lt;/th&gt;";
+    echo "&lt;/tr&gt;";
+
+    foreach ($produkte as $supermarkt) {
+        $gesamtpreis = $supermarkt['preis'] * $supermarkt['menge'];
+        echo "&lt;tr&gt;";
+        echo "&lt;td&gt;" . $supermarkt['name'] . "&lt;/td&gt;";
+        echo "&lt;td&gt;" . $supermarkt['preis'] . "&lt;/td&gt;";
+        echo "&lt;td&gt;" . $supermarkt['menge'] . "&lt;/td&gt;";
+        echo "&lt;td&gt;$gesamtpreis&lt;/td&gt;";
+        echo "&lt;/tr&gt;";
+    }
+    echo "&lt;/table&gt;";
+    echo "&lt;br&gt;";
+
+    function Gesamtwert($produkte) {
+        $summe = 0;
+        foreach ($produkte as $supermarkt) {
+            $gesamtpreis = $supermarkt['preis'] * $supermarkt['menge'];
+            $summe += $gesamtpreis; 
+        }
+        return $summe; 
+    }
+    $gesamtwert = Gesamtwert($produkte);
+    echo "Der Gesamtwert des Warenbestandes beträgt " . $gesamtwert . " €.";
+    ?&gt;
+
+    &lt;h2&gt;Übung 6: Einfache Formulare und Bedingungsprüfung&lt;/h2&gt;
+    &lt;?php
+    if (!isset($_SESSION["zahlen"])){
+        $_SESSION["zahlen"] = [];
+    } 
+    if (isset($_POST["zahl"])){
+        $_SESSION["zahlen"][] = $_POST["zahl"];
+    }
+    ?&gt;
+    
+    &lt;form method="POST"&gt;
+    Zahl: &lt;br&gt;     
+    
+    &lt;?php
+    echo "&lt;ul&gt;";
+    foreach ($_SESSION["zahlen"] as $zahl) {
+        if ($zahl % 2 == 0) {
+            echo "&lt;li&gt;$zahl = Gerade&lt;/li&gt;";
+        } else {
+            echo "&lt;li&gt;$zahl = Ungerade&lt;/li&gt;";
+        }
+    }
+    echo "&lt;/ul&gt;";
+    echo "&lt;input type='number' name='zahl'&gt;";
+    ?&gt;
+            
+    &lt;input type="submit" value="Senden"&gt;
+    &lt;/form&gt;
+    
+    &lt;h2&gt;Übung 7: Schreibe eine PHP Seite für Fibbonacci Zahlen&lt;/h2&gt;
+    &lt;?php
+    $a = 0; 
+    $b = 1; 
+    
+    echo "&lt;ul&gt;"; 
+    for ($i = 0; $i &lt; 100; $i++) {
+        echo "&lt;li&gt;$b&lt;/li&gt;"; 
+        $fibo = $b; 
+        $b = $a + $b; 
+        $a = $fibo; 
+    }
+    echo "&lt;/ul&gt;"; 
+    ?&gt;
+    
+    &lt;h2&gt;Komplexe Übungen&lt;/h2&gt;
+    &lt;h2&gt;FizzBuzz&lt;/h2&gt;
+    &lt;?php
+    $zahl = 3;
+    $zahl1 = 5;
+    
+    echo "&lt;ol&gt;";
+    for ($a = 1; $a &lt; 101; $a++) {
+        if ($a % $zahl == 0 and $a % $zahl1 == 0) {
+            echo "FizzBuzz" . "&lt;br&gt;";
+        } elseif ($a % $zahl == 0) {
+            echo "Fizz" . "&lt;br&gt;";
+        } elseif ($a % $zahl1 == 0) {
+            echo "Buzz" . "&lt;br&gt;";
+        } else {
+            echo $a . "&lt;br&gt;";
+        } 
+    }  
+    echo "&lt;/ol&gt;";
+    ?&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;</code>
+</pre>
+</div>
+</div>
+
+    <div class="impressum-container">
+        <img class="header-image3" src="../Bilder/code.png">
+
+        <div>
+            <button class="styled-button" onclick="window.history.back();">Zurück</button>
+        </div>
+    </div>
+
+    <footer>
+        <p class="footer">© <span id="year"></span> Maximilian Heeß. Alle Rechte vorbehalten.&nbsp;&nbsp;&nbsp;<button class="impressum" onclick="window.location.href='impressum.html';">Impressum</button>&nbsp;&nbsp;&nbsp;<button class="impressum" onclick="window.location.href='datenschutz.html';">Datenschutzerklärung</button></p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/line-numbers/prism-line-numbers.js"></script>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>

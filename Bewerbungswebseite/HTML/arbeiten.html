@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abschlussarbeiten</title>
+
+    <link rel="icon" href="../Bilder/Bild1.png" type="image/png">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/responsive.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
+
+</head>
+<body>
+    <div class="navbar">
+        <h1 class="headline">Abschlussarbeiten</h1>
+
+        <div>
+            <input type="checkbox" id="toggle_button">
+            <label for="toggle_button">
+            <span class="material-symbols-outlined">menu</span></label>
+            <a href="/">Home</a>
+            <a href="about.html">Über mich</a>
+            <a href="werdegang.html">Werdegang</a>
+            <a href="anwendungen.html">Anwendungen</a>
+            <a href="contact.html">Kontakt</a>
+        </div>
+    </div>
+    <div class="about-container">
+        <h2><img class="header-image1" src="../Bilder/hashtag.png">&nbsp;&nbsp;Masterarbeit</h2>
+        <p>In meiner Masterarbeit untersuchte ich die Auswirkungen der Coronakrise auf die Fanbindung im deutschen Profifußball, fokussiert auf den VfB Stuttgart. Ziel war es, die emotionale Bindung und das Verhalten der Fans während der Pandemie zu analysieren. Ich führte eine umfassende Online-Umfrage durch, die zeigte, dass 66,7 % der Fans trotz der Krise loyal blieben, während 74,4 % der Befragten jedoch einen Rückgang der Emotionen für den Fußball spürten. Die Ergebnisse verdeutlichen, dass die Krise den Profifußball tiefgreifend beeinflusste, gleichzeitig aber auch die Bedeutung digitaler und kontaktloser Interaktionen in Zukunft stärkt.</p><br>
+        <iframe allowfullscreen="allowfullscreen" scrolling="no" class="fp-iframe" style="border: 1px solid lightgray; width: 100%; height: 550px;" src="https://heyzine.com/flip-book/7476cd8995.html"></iframe>
+    </div>
+        <div class="about-container">
+            <h2><img class="header-image1" src="../Bilder/hashtag.png">&nbsp;&nbsp;Bachelorarbeit</h2>
+            <p>In meiner Bachelorarbeit untersuchte ich den Digitalisierungsgrad in der deutschen Fußballbranche, insbesondere in den Clubs der 1. und 2. Fußball-Bundesliga. Anhand einer umfassenden Online-Umfrage wurde festgestellt, dass die Digitalisierung in Bereichen wie Stadionbetrieb und Marketing bereits stark vorangeschritten ist, während der Sportbereich noch Aufholbedarf hat. Die Studie zeigte, dass die Fußballclubs in der Nutzung digitaler Technologien großes Potenzial haben, sich durch innovative Strategien weiterzuentwickeln, um Wettbewerbsvorteile zu sichern und neue Geschäftsfelder zu erschließen.</p><br>
+            <iframe allowfullscreen="allowfullscreen" scrolling="no" class="fp-iframe" style="border: 1px solid lightgray; width: 100%; height: 550px;" src="https://heyzine.com/flip-book/2ba4ea84b4.html"></iframe>
+        </div>
+    
+
+    <div class="impressum-container">
+        <img class="header-image3" src="../Bilder/code.png">
+
+        <div>
+            <button class="styled-button" onclick="window.location.href='werdegang.html';">Zurück</button>
+        </div>
+    </div>
+
+    <footer>
+        <p class="footer">© <span id="year"></span> Maximilian Heeß. Alle Rechte vorbehalten.&nbsp;&nbsp;&nbsp;<button class="impressum" onclick="window.location.href='impressum.html';">Impressum</button>&nbsp;&nbsp;&nbsp;<button class="impressum" onclick="window.location.href='datenschutz.html';">Datenschutzerklärung</button></p>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>

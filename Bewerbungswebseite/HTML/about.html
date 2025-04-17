@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Über mich</title>
+
+    <link rel="icon" href="../Bilder/Bild1.png" type="image/png">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/responsive.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
+
+
+</head>
+<body>
+    <div class="navbar">
+        <h1 class="headline">Über mich</h1>
+
+        <div>
+            <input type="checkbox" id="toggle_button">
+            <label for="toggle_button">
+            <span class="material-symbols-outlined">menu</span></label>
+            <a href="/">Home</a>
+            <a href="about.html">Über mich</a>
+            <a href="werdegang.html">Werdegang</a>
+            <a href="anwendungen.html">Anwendungen</a>
+            <a href="contact.html">Kontakt</a>
+        </div>
+    </div>
+    <div class="about-container">
+        
+        <img class="header-image3" src="../Bilder/hashtag.png">
+        <p>Mein Name ist Maximilian Heeß, und mein großes Ziel ist es, als Anwendungsentwickler durchzustarten. Mit meiner aktuellen Umschulung zum Fachinformatiker für Anwendungsentwicklung bei der GFN GmbH in Stuttgart verfolge ich diesen Traum mit voller Leidenschaft. Die Programmierung bereitet mir nicht nur große Freude, sondern fordert mich auch dazu heraus, kreative und effiziente Lösungen zu entwickeln.</p>
+        <img class="header-image3" src="../Bilder/hashtag.png">
+        <p>Neben meiner Begeisterung für das Programmieren gehört auch der Fußball zu meinen großen Leidenschaften. Der Sport hat mir Teamgeist, Durchhaltevermögen und strategisches Denken vermittelt – Fähigkeiten, die ich auch in meiner beruflichen Laufbahn als Anwendungsentwickler anwenden möchte.</p>
+        <img class="header-image3" src="../Bilder/hashtag.png">
+        <p>Mit einem Master in Medien- und Kommunikationsmanagement mit der Vertiefung Sportmarketing sowie einem Bachelor in Medienmanagement mit der Vertiefung Sport- und Eventmanagement bringe ich zusätzlich Erfahrungen aus der Welt des Marketings und des Projektmanagements mit, die mir helfen, Projekte sowohl technisch als auch organisatorisch erfolgreich umzusetzen.</p>
+        
+    </div>
+
+    <div class="impressum-container">
+        <img class="header-image3" src="../Bilder/code.png">
+
+        <div>
+            <button class="styled-button" onclick="window.history.back();">Zurück</button>
+        </div>
+    </div>
+    
+    <footer>
+        <p class="footer">© <span id="year"></span> Maximilian Heeß. Alle Rechte vorbehalten.&nbsp;&nbsp;&nbsp;<button class="impressum" onclick="window.location.href='impressum.html';">Impressum</button>&nbsp;&nbsp;&nbsp;<button class="impressum" onclick="window.location.href='datenschutz.html';">Datenschutzerklärung</button></p>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>

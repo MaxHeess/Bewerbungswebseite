@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beispielwebseite</title> 
+
+    <link rel="icon" href="../Bilder/Bild1.png" type="image/png">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/responsive.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/themes/prism.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/line-numbers/prism-line-numbers.css" rel="stylesheet" />
+   
+</head>
+<body>
+    <div class="navbar">
+        <h1 class="headline">Beispielwebseite</h1>
+
+        <div>
+            <input type="checkbox" id="toggle_button">
+            <label for="toggle_button">
+            <span class="material-symbols-outlined">menu</span></label>
+            <a href="/">Home</a>
+            <a href="about.html">Über mich</a>
+            <a href="werdegang.html">Werdegang</a>
+            <a href="anwendungen.html">Anwendungen</a>
+            <a href="contact.html">Kontakt</a>
+        </div>
+    </div>
+
+<div class="about-container">
+<h2><img class="header-image1" src="../Bilder/hashtag.png">&nbsp;&nbsp;HTML Code</h2>
+<div class="code-container">
+<pre class="line-numbers">
+<code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="de"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Glückskekse&lt;/title&gt;
+    &lt;link rel="icon" href="icon.png" type="image/png"&gt;
+
+    &lt;style&gt;
+        /* CSS Styles hier */
+    &lt;/style&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="hero-section"&gt;
+        &lt;div class="hero-text"&gt;
+            &lt;h1&gt;Glückskekse&lt;/h1&gt;
+            &lt;p&gt;Entdecke deinen persönlichen Glückskeks&lt;/p&gt;
+            &lt;button id="open-cookie-btn"&gt;Deinen Glückskeks öffnen&lt;/button&gt;
+            &lt;p id="fortune-text" class="fortune-hidden"&gt;&lt;/p&gt;
+            &lt;div class="generator"&gt;
+                &lt;div class="generator-before"&gt;
+                    &lt;img src="glueckskeks-closed.png" alt="Geschlossener Glückskeks"&gt;
+                &lt;/div&gt;
+                &lt;div class="generator-after"&gt;
+                    &lt;img src="glueckskeks-open-left.png" alt="Linke Seite eines geöffneten Glückskekses"&gt;
+                    &lt;div class="generator-message"&gt;
+                        &lt;div class="generator-message-txt" id="fortune-cookie-message"&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;img src="glueckskeks-open-right.png" alt="Rechte Seite eines geöffneten Glückskekses"&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="social-buttons" id="social-buttons"&gt;
+                &lt;a href="#" id="facebook-share" target="_blank"&gt;
+                    &lt;img src="facebook_icon.png" alt="Facebook teilen"&gt;
+                &lt;/a&gt;
+                &lt;a href="#" id="instagram-share" target="_blank"&gt;
+                    &lt;img src="instagram_icon.png" alt="Instagram teilen"&gt;
+                &lt;/a&gt;
+                &lt;a href="#" id="twitter-share" target="_blank"&gt;
+                    &lt;img src="x_icon.png" alt="X (Twitter) teilen"&gt;
+                &lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;button id="back-btn"&gt;Zurück&lt;/button&gt;
+
+    &lt;script&gt;
+        // JavaScript Code hier
+    &lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code>
+</pre>
+</div>
+</div>
+
+<div class="about-container">
+<h2><img class="header-image1" src="../Bilder/hashtag.png">&nbsp;&nbsp;CSS Code</h2>
+<div class="code-container">
+<pre class="line-numbers">
+<code class="language-css">&lt;style&gt;
+body {
+    font-family: Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.hero-section {
+    background-image: url(&quot;header.png&quot;);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+
+.hero-text {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+#open-cookie-btn {
+    background-color: #333;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+#open-cookie-btn:hover {
+    background-color: #9b9692;
+}
+
+#fortune-text {
+    margin-top: 20px;
+    font-size: 22px;
+    font-style: italic;
+    color: white;
+}
+
+.fortune-hidden {
+    display: none;
+}
+
+.fortune-visible {
+    display: block;
+}
+
+.generator {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.generator img {
+    max-width: 100px;
+}
+
+.generator-before img {
+    display: block;
+}
+
+.generator-after {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+}
+
+.generator-message {
+    padding: 10px;
+    background-color: #fffbea;
+    border: 1px solid #d4c8a2;
+    margin: 0 10px;
+}
+
+.generator-message-txt {
+    font-size: 18px;
+    font-style: italic;
+    color: #333;
+}
+
+#back-btn {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 20px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+#back-btn:hover {
+    background-color: #9b9692;
+}
+
+.social-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none; 
+}
+
+.social-buttons a {
+    margin: 0 15px; 
+}
+
+.social-buttons img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.social-buttons a:hover img {
+    opacity: 0.7;
+}
+&lt;/style&gt;</code>
+</pre>
+</div>
+</div>
+
+<div class="about-container">
+    <h2><img class="header-image1" src="../Bilder/hashtag.png">&nbsp;&nbsp;JavaScript Code</h2>
+<div class="code-container">
+<pre class="line-numbers">
+<code class="language-javascript">&lt;script&gt;
+document.addEventListener(&#39;DOMContentLoaded&#39;, function () {
+    const fortunes = [
+        &quot;Du wirst bald eine positive Überraschung erleben.&quot;,
+        &quot;Ein Lächeln ist die beste Antwort.&quot;,
+        &quot;Geduld bringt Rosen.&quot;,
+        &quot;Vertraue auf deine Intuition.&quot;,
+        &quot;Ein neuer Anfang erwartet dich.&quot;,
+        &quot;Gutes kommt zu denen, die warten.&quot;,
+        &quot;Ein großes Abenteuer steht vor der Tür.&quot;,
+        &quot;Deine Freundlichkeit wird belohnt werden.&quot;,
+        &quot;Der Erfolg ist näher, als du denkst.&quot;,
+        &quot;Das Glück ist auf deiner Seite.&quot;,
+        &quot;Glaube an dich selbst.&quot;,
+        &quot;Deine Bemühungen werden bald belohnt.&quot;,
+        &quot;Ein neues Abenteuer wartet auf dich.&quot;,
+        &quot;Teile dein Glück mit anderen.&quot;,
+        &quot;Du wirst eine unerwartete Nachricht erhalten.&quot;,
+        &quot;Vertrauen ist der Schlüssel zum Erfolg.&quot;,
+        &quot;Harte Arbeit zahlt sich aus.&quot;,
+        &quot;Ein Freund wird dir bald helfen.&quot;,
+        &quot;Eine Reise bringt neue Erkenntnisse.&quot;,
+        &quot;Folge deinem Herzen.&quot;,
+        &quot;Das Glück ist auf deiner Seite.&quot;,
+        &quot;Nimm dir Zeit für dich selbst.&quot;,
+        &quot;Heute ist ein guter Tag für neue Herausforderungen.&quot;,
+        &quot;Geduld wird dir Erfolg bringen.&quot;,
+        &quot;Du wirst bald eine wichtige Entscheidung treffen.&quot;,
+        &quot;Bleib optimistisch, die besten Dinge kommen noch.&quot;,
+        &quot;Erfolg liegt in deiner Zukunft.&quot;,
+        &quot;Heute ist der erste Tag deines neuen Lebens.&quot;,
+        &quot;Eine positive Einstellung führt zum Erfolg.&quot;,
+        &quot;Ein unerwarteter Gast wird Freude bringen.&quot;,
+        &quot;Freundlichkeit wird dir bald begegnen.&quot;,
+        &quot;Etwas Wunderbares wird dir passieren.&quot;,
+        &quot;Du wirst bald stolz auf deine Leistungen sein.&quot;,
+        &quot;Glück wird deine Bemühungen begleiten.&quot;,
+        &quot;Vertraue dem Prozess, alles kommt zur richtigen Zeit.&quot;,
+        &quot;Liebe wird den Weg weisen.&quot;,
+        &quot;Veränderungen führen zu Wachstum.&quot;,
+        &quot;Gute Dinge brauchen Zeit.&quot;,
+        &quot;Eine neue Perspektive wird dir neue Wege öffnen.&quot;,
+        &quot;Du bist auf dem richtigen Weg.&quot;
+    ];
+
+    const btn = document.getElementById(&#39;open-cookie-btn&#39;);
+    const fortuneText = document.getElementById(&#39;fortune-text&#39;);
+    const generatorBefore = document.querySelector(&#39;.generator-before&#39;);
+    const generatorAfter = document.querySelector(&#39;.generator-after&#39;);
+    const fortuneCookieMessage = document.getElementById(&#39;fortune-cookie-message&#39;);
+    const socialButtons = document.getElementById(&#39;social-buttons&#39;);
+    const facebookShareBtn = document.getElementById(&#39;facebook-share&#39;);
+    const twitterShareBtn = document.getElementById(&#39;twitter-share&#39;);
+    const instagramShareBtn = document.getElementById(&#39;instagram-share&#39;);
+
+    let cookieOpened = false;
+
+    btn.addEventListener(&#39;click&#39;, function () {
+        if (cookieOpened) {
+            return;
+        }
+
+        const randomIndex = Math.floor(Math.random() * fortunes.length);
+        const selectedFortune = fortunes[randomIndex];
+
+        generatorBefore.style.display = &#39;none&#39;;
+        generatorAfter.style.display = &#39;flex&#39;;
+
+        fortuneCookieMessage.textContent = selectedFortune;
+
+        cookieOpened = true;
+
+        btn.disabled = true;
+        btn.style.backgroundColor = &quot;red&quot;;
+
+        socialButtons.style.display = &#39;flex&#39;;
+
+        const encodedFortune = encodeURIComponent(selectedFortune);
+        facebookShareBtn.href = &quot;https://www.facebook.com/sharer/sharer.php?u=https://yourwebsite.com&amp;quote=&quot; + encodedFortune;
+        twitterShareBtn.href = &quot;https://twitter.com/intent/tweet?text=&quot; + encodedFortune;
+        instagramShareBtn.href = &quot;https://www.instagram.com/?text=&quot; + encodedFortune; 
+    });
+
+    const backBtn = document.getElementById(&#39;back-btn&#39;);
+    backBtn.addEventListener(&#39;click&#39;, function () {
+        window.location.href = &quot;https://mh801.wordpress.com/?_gl=1*ng2h4f*_gcl_au*MTk2OTk1ODE5Ny4xNzI3NDIxMDA1&quot;;
+    });
+});
+&lt;/script&gt;</code>
+</pre>
+</div>
+</div>
+
+    <div class="impressum-container">
+        <img class="header-image3" src="../Bilder/code.png">
+
+        <div>
+            <button class="styled-button" onclick="window.history.back();">Zurück</button>
+        </div>
+    </div>
+
+    <footer>
+        <p class="footer">© <span id="year"></span> Maximilian Heeß. Alle Rechte vorbehalten.&nbsp;&nbsp;&nbsp;<button class="impressum" onclick="window.location.href='impressum.html';">Impressum</button>&nbsp;&nbsp;&nbsp;<button class="impressum" onclick="window.location.href='datenschutz.html';">Datenschutzerklärung</button></p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/plugins/line-numbers/prism-line-numbers.js"></script>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
