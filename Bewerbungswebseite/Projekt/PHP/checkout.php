@@ -24,7 +24,7 @@ if(!isset($_SESSION["kunde"])){
     // Datenbankverbindung herstellen
     $servername = "localhost";
     $username = "d04212b7";
-    $password = "Artus.2008";
+    $password = "";
     $dbname = "d04212b7";
 
     try {
