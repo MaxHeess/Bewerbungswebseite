@@ -26,7 +26,7 @@ $_SESSION['last_activity'] = time();
 if(isset($_POST['email'])){
     $servername = "localhost";
     $username = "d04212b7";
-    $password = "Artus.2008";
+    $password = "";
     $dbname = "d04212b7";
 
     try {
